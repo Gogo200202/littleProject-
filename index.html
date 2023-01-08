@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You is my happiness</title>
+    <style>
+        body {
+          background-image: url('https://static.vecteezy.com/system/resources/previews/001/893/870/large_2x/valentine-s-day-red-hearts-background-free-vector.png');
+        }
+
+    .center {
+        position: absolute;
+top: 50%;
+left: 50%;
+margin-top: -200px;
+margin-left: -300px;
+width: 450px;
+height: 100px;
+}
+.centerBlob {
+    position: absolute;
+top: 50%;
+left: 50%;
+margin-top: 50px;
+margin-left: -500px;
+width: 150;
+height: 100px;
+}
+.blob{
+    font-size: 50px;
+    color: white;
+}
+
+        
+    </style> 
+</head>
+<body> 
+    <audio controls autoplay>
+        <source src="https://ia801009.us.archive.org/19/items/stephaniepoetriiloveyou3000/Stephanie%20Poetri%20-%20I%20Love%20You%203000.mp3" type="audio/ogg">
+        <source src="https://ia801009.us.archive.org/19/items/stephaniepoetriiloveyou3000/Stephanie%20Poetri%20-%20I%20Love%20You%203000.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio> 
+    <div class="center" id ="blob">
+        <p class="blob">I blob you my prince</p>
+    </div>
+    <div class="centerBlob" id ="conteiner"></div>
+    <script>
+    
+        document.getElementById("blob").addEventListener("click",addelementToTheDivBlob)
+
+        let thingsThatIWantToSay=[];
+        thingsThatIWantToSay[0]="I will always blob you "
+        thingsThatIWantToSay[1]="Your smile makes me fell beter and beter every day"
+        thingsThatIWantToSay[2]="You are the most beautiful girl and i want you to know that"
+        thingsThatIWantToSay[3]="I will be with you forever and ever and ever and ever and ever"
+        thingsThatIWantToSay[4]="You are the best at making me happy :)"
+        thingsThatIWantToSay[5]="My little princess"
+        thingsThatIWantToSay[6]="My soulmate"
+        thingsThatIWantToSay[7]="Im always interested at your storyes"
+        thingsThatIWantToSay[8]="You make my life meaningfull"
+        thingsThatIWantToSay[9]="You are the best thing that has happened to me"
+        thingsThatIWantToSay[10]="You are the funniest in the world"
+        thingsThatIWantToSay[11]="We will always have Дюнерчера friday"
+        thingsThatIWantToSay[12]="I blob you just the way you are"
+        thingsThatIWantToSay[13]="You make my day just by loking at me"
+        thingsThatIWantToSay[14]="❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤"
+
+        let endMesseg="You are the best dont forget that i will never leave you"
+
+        let divConteiner=document.getElementById("conteiner");
+        function addelementToTheDivBlob(){
+           
+            
+            
+            let curentThingToSay=""
+            if(thingsThatIWantToSay.length==0){
+                debugger
+                
+                curentThingToSay=endMesseg;
+                endMesseg="";
+            }
+            let randomNumber=Math.random();
+              
+            if(thingsThatIWantToSay.length>0){
+                if(randomNumber<0.5){
+                 curentThingToSay=thingsThatIWantToSay.shift();
+            }
+            else{
+                 curentThingToSay=thingsThatIWantToSay.pop();
+            }
+            }
+            
+
+            let creatP=document.createElement("p");
+            creatP.textContent=curentThingToSay;
+            creatP.className="blob";
+            divConteiner.appendChild(creatP);
+            
+              
+        }
+
+    </script>
+</body>
+</html>
